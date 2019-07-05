@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1240.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="img_logo" fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/logo.png" />
+         </image>
+      </ImageView>
+      <Label text="Bem-vindo ao SuperBurguer" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Label>
+      <JFXButton fx:id="btn_iniciar" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: #898989; -fx-background-radius: 50;" text="EFETUAR UM PEDIDO" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </JFXButton>
+   </children>
+</VBox>
