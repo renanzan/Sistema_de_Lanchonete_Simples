@@ -101,4 +101,8 @@ public abstract class FXMLClass extends Application {
 		this.title = title;
 	}
 	
+	public static Stage getStage() {
+		return primaryStage;
+	}
+	
 }

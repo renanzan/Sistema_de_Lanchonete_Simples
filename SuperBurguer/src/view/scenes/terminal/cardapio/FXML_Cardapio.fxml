@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane fx:id="dialog" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);">
+         <center>
+            <VBox alignment="CENTER" fillWidth="false">
+               <children>
+                  <StackPane>
+                     <children>
+                        <AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="115.0" layoutY="14.0" spacing="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Pedido Finalizado">
+                                             <font>
+                                                <Font name="System Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <Label text="cód. do pedido" textFill="#00000066" />
+                                                <Label text="00000012312" textFill="#00000066">
+                                                   <HBox.margin>
+                                                      <Insets left="3.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="06/07/2019">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="às">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="02:26">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Retire a nota">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Pagamento no caixa">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;">
+                           <children>
+                              <Label layoutX="86.0" layoutY="38.0" text="Compra" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="35.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="307.0" layoutY="35.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="50.0">
+                                 <children>
+                                    <Label text="cód. do pedido" textFill="#00000066" />
+                                    <Label text="00000012312" textFill="#00000066">
+                                       <HBox.margin>
+                                          <Insets left="3.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <ScrollPane layoutX="50.0" layoutY="98.0" prefHeight="200.0" prefWidth="407.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="100.0" />
+                              <Label layoutX="50.0" layoutY="375.0" text="Valor Total" AnchorPane.leftAnchor="50.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="3.0" layoutY="362.0" prefHeight="2.0" prefWidth="483.0" style="-fx-background-color: #d7d7d7;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                              <HBox layoutX="337.0" layoutY="375.0" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <Label text="R$">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="37">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text=",">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="15">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="btn_dialog_cancelar" layoutY="424.0" prefHeight="70.0" prefWidth="250.0" style="-fx-background-radius: 0 0 0 50;" text="Cancelar" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_dialog_confirmar" layoutX="270.0" layoutY="448.0" prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: #878787; -fx-background-radius: 0 0 50 0;" text="Confirmar Pedido" textFill="WHITE" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="-1.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="pane_cardapio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <ScrollPane fx:id="scrollPaneCardapio" hbarPolicy="NEVER" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <VBox fx:id="linearLayoutCardapio" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="915.0" />
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="930.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="350.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="46.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" style="-fx-padding: 16;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/icons/shopping_cartpng.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="CARRINHO">
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="87.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+                     <content>
+                        <VBox fx:id="linearLayoutCarrinho" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="348.0" />
+                     </content>
+                  </ScrollPane>
+                  <JFXButton fx:id="btn_finalizar" layoutY="570.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" style="-fx-background-color: #8f8f8f; -fx-background-radius: 0;" text="FINALIZAR" textFill="WHITE" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Roboto Light" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_cancelar" layoutX="10.0" layoutY="580.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" text="CANCELAR" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Roboto Light" size="25.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
