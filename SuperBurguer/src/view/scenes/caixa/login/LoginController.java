@@ -3,9 +3,12 @@ package view.scenes.caixa.login;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
+import database.dao.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -37,8 +40,12 @@ public class LoginController implements Initializable {
 	}
 	
 	private void connect() {
-		System.out.println("Conectar");
-		CommonFunctions.swapScenes(MainCaixa.getStage(), DirectoryShortcuts.URL_SCENE_CAIXA_PAGINA_INICIAL, new PaginaInicialController());
+		MainCaixa.currentUser = UsuarioDAO.autenticar(txt_login.getText(), txt_senha.getText());
+		
+		if(MainCaixa.currentUser != null)
+			CommonFunctions.swapScenes(MainCaixa.getStage(), DirectoryShortcuts.URL_SCENE_CAIXA_PAGINA_INICIAL, new PaginaInicialController());
+		else
+			JOptionPane.showMessageDialog(null, "Nome de usuário ou senha incorretos.");
 	}
 
 }

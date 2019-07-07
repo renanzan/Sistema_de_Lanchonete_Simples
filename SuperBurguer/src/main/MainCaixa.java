@@ -1,13 +1,19 @@
 package main;
 
+import database.Database;
+import database.models.Caixa;
 import view.scenes.caixa.login.LoginController;
 import view.util.DirectoryShortcuts;
 import view.util.FXMLClass;
 
 public class MainCaixa extends FXMLClass {
-
+	
+	public static Caixa currentUser;
+	
 	public static void main(String[] args) {
-		launch(args);
+		if(Database.getSingletonConnection() != null) {
+			launch(args);
+		}
 	}
 
 	@Override

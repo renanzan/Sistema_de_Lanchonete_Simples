@@ -1,6 +1,10 @@
 package database.models;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+
+import database.dao.ItensDoPedidoDAO;
 
 public class Pedido {
 
@@ -9,10 +13,28 @@ public class Pedido {
 		PENDENTE
 	}
 	
-	private String codCliente;
-	private ArrayList<Produto> produtos;
+	private int numPedido;
+	private ArrayList<Produto> produtos = new ArrayList<>();
 	private Status status;
+	private LocalDateTime dataHora;
 	
+	public Pedido() {}
+	
+	public Pedido(int numPedido, Status status, Timestamp dataHora) {
+		this.numPedido = numPedido;
+		this.produtos = ItensDoPedidoDAO.getProdutos(numPedido);
+		this.status = status;
+		this.dataHora = dataHora.toLocalDateTime();
+	}
+	
+	public static Status toStatus(String status) {
+		return Status.valueOf(status.toUpperCase());
+	}
+	
+	public int getNumPedido() {
+		return numPedido;
+	}
+
 	public double getPreco() {
 		double preco = 0;
 		
@@ -30,6 +52,10 @@ public class Pedido {
 			return troco;
 		} else
 			return -1;
+	}
+	
+	public void addProduto(Produto produto) {
+		produtos.add(produto);
 	}
 	
 }
