@@ -20,7 +20,7 @@ public abstract class CaixaDAO extends UsuarioDAO {
 		try {
 			while(rs.next())
 				pedidos.add(new Pedido(
-						rs.getInt(PedidoDAO.Column.num_pedido.toString()),
+						rs.getString(PedidoDAO.Column.num_pedido.toString()),
 						Pedido.toStatus(rs.getString(PedidoDAO.Column.status_pedido.toString())),
 						rs.getTimestamp(PedidoDAO.Column.data_hora.toString())
 				));

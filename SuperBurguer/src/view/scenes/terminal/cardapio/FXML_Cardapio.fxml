@@ -22,7 +22,7 @@
                <children>
                   <StackPane>
                      <children>
-                        <AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;">
+                        <AnchorPane fx:id="dialog2" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 50;">
                            <children>
                               <VBox alignment="CENTER" layoutX="115.0" layoutY="14.0" spacing="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
@@ -102,7 +102,10 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <ScrollPane layoutX="50.0" layoutY="98.0" prefHeight="200.0" prefWidth="407.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="100.0" />
+                              <ScrollPane fitToWidth="true" layoutX="50.0" layoutY="98.0" prefHeight="200.0" prefWidth="407.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="100.0">
+                                 <content>
+                                    <VBox fx:id="linearLayoutDialogCarrinho" />
+                                 </content></ScrollPane>
                               <Label layoutX="50.0" layoutY="375.0" text="Valor Total" AnchorPane.leftAnchor="50.0">
                                  <font>
                                     <Font size="30.0" />
@@ -116,7 +119,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Label text="37">
+                                    <Label fx:id="txt_valor_total_reais" text="37">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
@@ -126,7 +129,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Label text="15">
+                                    <Label fx:id="txt_valor_tota_centavos" text="15">
                                        <font>
                                           <Font size="18.0" />
                                        </font>

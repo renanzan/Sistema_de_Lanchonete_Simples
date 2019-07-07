@@ -13,7 +13,6 @@ public class Produto {
 	private double preco;
 	private TipoProduto tipo;
 	private String descricao;
-	private int qtd;
 	private byte[] image;
 	
 	public Produto(int cod_produto, String nome, double preco, TipoProduto tipo, String descricao, int qtd) {
@@ -22,7 +21,6 @@ public class Produto {
 		this.preco = preco;
 		this.tipo = tipo;
 		this.descricao = descricao;
-		this.qtd = qtd;
 		
 		// PEGAR A IMAGEM
 		//this.image = image;
@@ -32,8 +30,22 @@ public class Produto {
 		return TipoProduto.valueOf(tripoProduto.toUpperCase());
 	}
 
+	public int getCod_produto() {
+		return cod_produto;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
 	public double getPreco() {
 		return preco;
 	}
+	
+	public String getDescricao() {
+		return descricao;
+	}
+	
+	
 
 }

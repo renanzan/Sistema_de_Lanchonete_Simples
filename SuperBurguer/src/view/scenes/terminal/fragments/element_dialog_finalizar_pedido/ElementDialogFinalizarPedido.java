@@ -14,8 +14,8 @@ public class ElementDialogFinalizarPedido {
 		try {
 			FXMLLoader loader = new FXMLLoader(DirectoryShortcuts.URL_ELEMENT_DIALOG_FINALIZAR_PEDIDO);
 			
-			ElementMenuCardapioController controller = new ElementMenuCardapioController(linearLayoutCarrinho);
-			loader.setController(controller);
+//			ElementMenuCardapioController controller = new ElementMenuCardapioController(linearLayoutCarrinho);
+//			loader.setController(controller);
 			Pane pane = loader.load();
 			return pane;
 		} catch (IOException ex) {

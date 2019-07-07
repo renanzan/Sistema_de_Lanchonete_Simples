@@ -18,12 +18,12 @@
             </Label>
             <VBox layoutX="75.0" layoutY="155.0" spacing="60.0" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="155.0">
                <children>
-                  <JFXTextField fx:id="txt_login" labelFloat="true" prefWidth="350.0" promptText="Login">
+                  <JFXTextField fx:id="txt_login" labelFloat="true" prefWidth="350.0" promptText="Login" text="renan">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txt_senha" labelFloat="true" prefHeight="45.0" prefWidth="350.0" promptText="Senha">
+                  <JFXTextField fx:id="txt_senha" labelFloat="true" prefHeight="45.0" prefWidth="350.0" promptText="Senha" text="123456">
                      <font>
                         <Font size="30.0" />
                      </font>

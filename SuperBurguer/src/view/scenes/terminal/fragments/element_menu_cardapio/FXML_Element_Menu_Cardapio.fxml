@@ -19,7 +19,7 @@
                   <Font name="Roboto Black" size="32.0" />
                </font>
             </Label>
-            <Label fx:id="txt_ingredientes" text="Pão, bife empanado, alface, tomate, maionese">
+            <Label fx:id="txt_descricao" text="Pão, bife empanado, alface, tomate, maionese">
                <font>
                   <Font name="Roboto Light" size="14.0" />
                </font>

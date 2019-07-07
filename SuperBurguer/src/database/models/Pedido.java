@@ -2,7 +2,8 @@ package database.models;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.UUID;
 
 import database.dao.ItensDoPedidoDAO;
 
@@ -13,14 +14,16 @@ public class Pedido {
 		PENDENTE
 	}
 	
-	private int numPedido;
-	private ArrayList<Produto> produtos = new ArrayList<>();
+	private String numPedido;
+	private HashMap<Produto, Integer> produtos = new HashMap<>();
 	private Status status;
 	private LocalDateTime dataHora;
 	
-	public Pedido() {}
+	public Pedido() {
+		this.numPedido = UUID.randomUUID().toString();
+	}
 	
-	public Pedido(int numPedido, Status status, Timestamp dataHora) {
+	public Pedido(String numPedido, Status status, Timestamp dataHora) {
 		this.numPedido = numPedido;
 		this.produtos = ItensDoPedidoDAO.getProdutos(numPedido);
 		this.status = status;
@@ -31,15 +34,15 @@ public class Pedido {
 		return Status.valueOf(status.toUpperCase());
 	}
 	
-	public int getNumPedido() {
+	public String getNumPedido() {
 		return numPedido;
 	}
 
 	public double getPreco() {
 		double preco = 0;
 		
-		for(Produto produto : produtos)
-			preco += produto.getPreco();
+		for(Produto produto : produtos.keySet())
+			preco += (produtos.get(produto) * produto.getPreco());
 		
 		return preco;
 	}
@@ -54,8 +57,8 @@ public class Pedido {
 			return -1;
 	}
 	
-	public void addProduto(Produto produto) {
-		produtos.add(produto);
+	public HashMap<Produto, Integer> getProdutos() {
+		return produtos;
 	}
 	
 }
