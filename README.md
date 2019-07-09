@@ -22,42 +22,38 @@ O código foi confeccionado usando a linguagem de programação Java. Para a int
 
 ## Script de execução
 > **Passo 1**
->> Instalar ou executar um SGBD na rede local
+>> * Instalar ou executar um SGBD na rede local <br>
+>> * Na confecção do software foi usado o MySQL <br>
 
->> Na confecção do software foi usado o MySQL
+> ***Passo 2 (Fundamental)*** <br>
+>> * Executar os scripts de criação de database e tabelas no SGBD <br>
 
-> ***Passo 2 (Fundamental)***
->> Executar os scripts de criação de database e tabelas no SGBD
+> Passo 3 (Facultativo)* <br>
+>> * Executar os scripts de povoamento do banco de dados <br>
 
-> *Passo 3 (Facultativo)*
->> Executar os scripts de povoamento do banco de dados
+> **Passo 4** <br>
+>> * Executar uma IDE com suporte à linguagem de programação Java <br>
 
-> **Passo 4**
->> Executar uma IDE com suporte à linguagem de programação Java
+> **Passo 5** <br>
+>> * Importar o projeto <br>
 
-> **Passo 5**
->> Importar o projeto
+> *Passo 6 (Facultativo)* <br>
+>> * Instalar o Scene Builder <br>
 
-> *Passo 6 (Facultativo)*
->> Instalar o Scene Builder
+> *Passo 7 (Facultativo)* <br>
+>> * Configurar o Scene Builder como padrão para leitura de arquivos FXML na IDE <br>
+>> * *(Eclipse Oxygen.3a Release (4.7.3a))* Window -> Preference -> JavaFX -> Inserir o executável SceneBuilder <br>
 
-> *Passo 7 (Facultativo)*
->> Configurar o Scene Builder como padrão para leitura de arquivos FXML na IDE
+> ***Passo 8 (Fundamenal)*** <br>
+>> * Importar a biblioteca "jfoenix-8.0.8.jar" <br>
+>> * Projeto -> Botão Direito -> Properties -> Java BuildPath -> Libraries -> Add External JARs... -> Selecionar .jar do "jfoenix-8.0.8.jar"  <br>
 
->> *(Eclipse Oxygen.3a Release (4.7.3a))* Window -> Preference -> JavaFX -> Inserir o executável SceneBuilder
+> ***Passo 9 (Fundamenal)*** <br>
+>> * Importar a biblioteca "mysql-connector-java-5.1.46-bin.jar" <br>
+>> * Projeto -> Botão Direito -> Properties -> Java BuildPath -> Libraries -> Add External JARs... -> Selecionar .jar do "mysql-connector-java-5.1.46-bin.jar" <br>
 
-> ***Passo 8 (Fundamenal)***
->> Importar a biblioteca "jfoenix-8.0.8.jar"
-
->> Projeto -> Botão Direito -> Properties -> Java BuildPath -> Libraries -> Add External JARs... -> Selecionar .jar do "jfoenix-8.0.8.jar"
-
-> ***Passo 9 (Fundamenal)***
->> Importar a biblioteca "mysql-connector-java-5.1.46-bin.jar"
-
->> Projeto -> Botão Direito -> Properties -> Java BuildPath -> Libraries -> Add External JARs... -> Selecionar .jar do "mysql-connector-java-5.1.46-bin.jar"
-
-> **Conclusão**
->> A classe MainCaixa é responsável por executar a aplicação do caixa e a MainTerminal pela do terminal
+> **Conclusão** <br>
+>> * A classe MainCaixa é responsável por executar a aplicação do caixa e a MainTerminal pela do terminal <br>
 
 
 ## Construído com
