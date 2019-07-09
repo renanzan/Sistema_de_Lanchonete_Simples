@@ -2,6 +2,10 @@
 Um software que simula um sistema de lanchonete com dois executáveis, para o terminal e para o caixa. Foi desenvolvido usando a linguagem de programação Java, o banco de dados foi estruturado usando o SGBD MySql e a interface gráfica foi baseada no framework JavaFX.
 Com este sistema é possível gerenciar os produtos que são vendidos por uma lanchonete e concluir pedidos através do software do caixa. Através do software do terminal é possível acessar o cardápio para efetuar um pedido. Essa interação é possível porque as aplicações de caixa e terminal compartilham o acesso do banco de dados.
 
+Para acessar mais imagens de pré-visualização [clique aqui](https://github.com/renanzan/Java_JavaFX_BD_Sistema_de_Lanchonete_Simples/tree/master/preview)
+
+As bibliotecas que são citadas no script de execução estão localizadas na pasta lib
+
 ### Pagina Inicial do Terminal
 ![](preview/img_terminal_1.png)
 
