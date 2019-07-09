@@ -12,6 +12,7 @@ Com este sistema é possível gerenciar os produtos que são vendidos por uma la
 #### Pagina Inicial do Caixa
 ![](preview/img_caixa_1.png)
 
+
 ## Pré-requisitos
 ```
 O código foi confeccionado usando a linguagem de programação Java. Para a interface gráfica foi usado o framework JavaFX, por isso é necesário importar a biblioteca "jfoenix-8.0.8.jar" para que não haja erros durante compilação.
