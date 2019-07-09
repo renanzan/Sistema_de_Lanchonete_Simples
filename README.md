@@ -6,6 +6,8 @@ Com este sistema é possível gerenciar os produtos que são vendidos por uma la
 
 *As bibliotecas que são citadas no script de execução estão localizadas na pasta lib*
 
+**Palavras chave:** Java, JavaFX, JFoenix, Interface Gráfica, SGBG, MySql
+
 ### Pagina Inicial do Terminal
 ![](preview/img_terminal_1.png)
 
