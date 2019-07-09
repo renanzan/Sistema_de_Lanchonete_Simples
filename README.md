@@ -46,6 +46,11 @@ O código foi confeccionado usando a linguagem de programação Java. Para a int
 
 >> Projeto -> Botão Direito -> Properties -> Java BuildPath -> Libraries -> Add External JARs... -> Selecionar .jar do "jfoenix-8.0.8.jar"
 
+> ***Passo 9 (Fundamenal)***
+>> Importar a biblioteca "mysql-connector-java-5.1.46-bin.jar"
+
+>> Projeto -> Botão Direito -> Properties -> Java BuildPath -> Libraries -> Add External JARs... -> Selecionar .jar do "mysql-connector-java-5.1.46-bin.jar"
+
 > **Conclusão**
 >> A classe MainCaixa é responsável por executar a aplicação do caixa e a MainTerminal pela do terminal
 
