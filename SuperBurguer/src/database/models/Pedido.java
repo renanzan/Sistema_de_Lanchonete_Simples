@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 import database.dao.ItensDoPedidoDAO;
+import database.dao.PedidoDAO;
 
 public class Pedido {
 
@@ -47,11 +48,16 @@ public class Pedido {
 		return preco;
 	}
 	
+	public Status getStatus() {
+		return status;
+	}
+	
 	public double efetuarPagamento(double dinheiro) {
-		double troco = getPreco() - dinheiro;
+		double troco = dinheiro - getPreco();
 		
 		if(troco > 0) {
 			this.status = Status.PAGO;
+			PedidoDAO.updateStatus(this);
 			return troco;
 		} else
 			return -1;
@@ -59,6 +65,10 @@ public class Pedido {
 	
 	public HashMap<Produto, Integer> getProdutos() {
 		return produtos;
+	}
+	
+	public LocalDateTime getDataHora() {
+		return dataHora;
 	}
 	
 }

@@ -4,8 +4,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
+import com.sun.javafx.image.impl.ByteRgba;
+
 import database.Database;
 import database.models.Produto;
+import database.util.ByteArray;
 
 public class ItensDoPedidoDAO {
 
@@ -54,13 +57,7 @@ public class ItensDoPedidoDAO {
 		
 		try {
 			while(rs.next())
-				produto = new Produto(
-						rs.getInt(ProdutoDAO.Column.cod_produto.toString()),
-						rs.getString(ProdutoDAO.Column.nome.toString()),
-						rs.getDouble(ProdutoDAO.Column.preco.toString()),
-						Produto.toTipoProduto(rs.getString(ProdutoDAO.Column.tipo.toString())),
-						rs.getString(ProdutoDAO.Column.descricao.toString()),
-						rs.getInt(ProdutoDAO.Column.qtd.toString()));
+				produto = ProdutoDAO.newInstance(rs);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

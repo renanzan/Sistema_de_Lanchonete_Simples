@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
 import database.dao.UsuarioDAO;
@@ -24,7 +25,7 @@ public class LoginController implements Initializable {
     private JFXTextField txt_login;
 
     @FXML
-    private JFXTextField txt_senha;
+    private JFXPasswordField txt_senha;
 
     @FXML
     private JFXButton btn_conectar;

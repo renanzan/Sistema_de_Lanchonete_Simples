@@ -1,10 +1,7 @@
 package main;
 
-import java.util.HashMap;
-
 import database.Database;
 import database.models.Pedido;
-import database.models.Produto;
 import view.scenes.terminal.pagina_inicial.PaginaInicialController;
 import view.util.FXMLClass;
 

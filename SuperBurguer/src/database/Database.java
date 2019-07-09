@@ -2,10 +2,9 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.mysql.jdbc.PreparedStatement;
 
 import main.SoftwareInfo;
 
@@ -48,6 +47,21 @@ public abstract class Database {
 		if(singletonConnection!=null)
 			try {
 				PreparedStatement stmt = (PreparedStatement) getSingletonConnection().prepareStatement(sqlScript);
+				stmt.executeUpdate();
+				return true;
+			} catch (SQLException ex) {
+				System.err.println("ERRO: Não foi possível atualizar o database.");
+				ex.printStackTrace();
+			}
+		else
+			System.err.println("Nenhuma conexão com o banco de dados foi estabelecida ainda.");
+		
+		return false;
+	}
+	
+	public static boolean DBUpdate(PreparedStatement stmt) {
+		if(singletonConnection!=null)
+			try {
 				stmt.executeUpdate();
 				return true;
 			} catch (SQLException ex) {

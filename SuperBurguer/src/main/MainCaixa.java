@@ -2,6 +2,8 @@ package main;
 
 import database.Database;
 import database.models.Caixa;
+import javafx.event.EventHandler;
+import javafx.stage.WindowEvent;
 import view.scenes.caixa.login.LoginController;
 import view.util.DirectoryShortcuts;
 import view.util.FXMLClass;
@@ -29,6 +31,13 @@ public class MainCaixa extends FXMLClass {
 	@Override
 	protected void afterInitialize() {
 //		primaryStage.setFullScreen(true);
+		
+		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+			@Override
+			public void handle(WindowEvent event) {
+				System.exit(0);
+			}
+		});
 	}
 	
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -23,11 +24,11 @@
                         <Font size="30.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txt_senha" labelFloat="true" prefHeight="45.0" prefWidth="350.0" promptText="Senha" text="123456">
+                  <JFXPasswordField fx:id="txt_senha" labelFloat="true" promptText="Senha" text="123456">
                      <font>
                         <Font size="30.0" />
                      </font>
-                  </JFXTextField>
+                  </JFXPasswordField>
                </children>
             </VBox>
             <JFXButton fx:id="btn_conectar" layoutX="385.0" layoutY="390.0" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000; -fx-background-radius: 50;" text="OK" textFill="WHITE">

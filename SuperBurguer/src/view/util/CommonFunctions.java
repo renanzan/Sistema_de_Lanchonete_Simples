@@ -3,10 +3,9 @@ package view.util;
 import java.io.IOException;
 import java.net.URL;
 
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class CommonFunctions {

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefWidth="790.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="cod. Pedido">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txt_cod_pedido" text="0000001234" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label fx:id="txt_data" text="10/06/2019">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="às">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txt_hora" text="15:39">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="271.0" layoutY="12.0" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="11.0">
+         <children>
+            <Label text="R$">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="txt_valor_reais" text="37">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label text=",">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="txt_valor_centavos" text="15">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btn_ok" layoutX="372.0" layoutY="19.0" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #478627; -fx-border-radius: 50; -fx-background-radius: 50;" text="Ok" textFill="#478627" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="11.0" />
+   </children>
+   <padding>
+      <Insets bottom="8.0" top="8.0" />
+   </padding>
+</AnchorPane>

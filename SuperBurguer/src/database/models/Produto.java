@@ -1,5 +1,8 @@
 package database.models;
 
+import java.io.File;
+import java.io.FileInputStream;
+
 public class Produto {
 	
 	public enum TipoProduto {
@@ -15,15 +18,21 @@ public class Produto {
 	private String descricao;
 	private byte[] image;
 	
-	public Produto(int cod_produto, String nome, double preco, TipoProduto tipo, String descricao, int qtd) {
+	public Produto(int cod_produto, String nome, double preco, TipoProduto tipo, String descricao, byte[] image) {
 		this.cod_produto = cod_produto;
 		this.nome = nome;
 		this.preco = preco;
 		this.tipo = tipo;
 		this.descricao = descricao;
-		
-		// PEGAR A IMAGEM
-		//this.image = image;
+		this.image = image;
+	}
+	
+	public Produto(String nome, double preco, TipoProduto tipo, String descricao, byte[] image) {
+		this.nome = nome;
+		this.preco = preco;
+		this.tipo = tipo;
+		this.descricao = descricao;
+		this.image = image;
 	}
 	
 	public static TipoProduto toTipoProduto(String tripoProduto) {
@@ -46,6 +55,12 @@ public class Produto {
 		return descricao;
 	}
 	
+	public TipoProduto getTipo() {
+		return tipo;
+	}
 	
+	public byte[] getImage() {
+		return image;
+	}
 
 }
